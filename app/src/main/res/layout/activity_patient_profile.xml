@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.PatientProfileActivity">
+
+    <TextView
+        android:id="@+id/patientProfileTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profileIv"
+        android:textSize="25dp"
+        android:text="Karton pacijenata"
+        />
+
+    <ImageView
+        android:id="@+id/profileIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patientProfileTv"
+        app:layout_constraintBottom_toTopOf="@id/nameEt"
+        android:src="@drawable/icon_profile"
+        />
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:nextFocusDown="@id/lastNameEt"
+        app:layout_constraintTop_toTopOf="@id/profileIv"
+        app:layout_constraintBottom_toTopOf="@id/lastNameEt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="25dp"
+        android:selectAllOnFocus="true"
+        android:hint="Ime"
+        />
+
+    <EditText
+        android:id="@+id/lastNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameEt"
+        app:layout_constraintBottom_toTopOf="@id/stateOnAdmissionTv"
+        app:layout_constraintStart_toStartOf="@id/nameEt"
+        android:layout_marginHorizontal="40dp"
+        android:singleLine="true"
+        android:nextFocusDown="@id/stateOnAdmissionEt"
+        android:selectAllOnFocus="true"
+        android:hint="Prezime"
+        />
+    <TextView
+        android:id="@+id/stateOnAdmissionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastNameEt"
+        app:layout_constraintBottom_toTopOf="@id/stateOnAdmissionEt"
+        android:layout_marginHorizontal="40dp"
+        android:text="Stanje pri prijemu"
+        />
+
+    <EditText
+        android:id="@+id/stateOnAdmissionEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/stateOnAdmissionTv"
+        app:layout_constraintBottom_toTopOf="@id/currentStateTv"
+        android:layout_marginHorizontal="40dp"
+        android:singleLine="true"
+        android:nextFocusDown="@id/currentStateEt"
+        android:hint="Stanje po prijemu"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/currentStateTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/stateOnAdmissionEt"
+        app:layout_constraintBottom_toTopOf="@id/currentStateEt"
+        android:layout_marginHorizontal="40dp"
+        android:text="Trenutno stanje"
+        />
+    <EditText
+        android:id="@+id/currentStateEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/currentStateTv"
+        app:layout_constraintBottom_toBottomOf="@id/dateOfAdmissionTv1"
+        android:layout_marginHorizontal="40dp"
+        android:singleLine="true"
+        android:hint="Trenutno stanje"
+        android:selectAllOnFocus="true"
+        />
+    <TextView
+        android:id="@+id/dateOfAdmissionTv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/currentStateEt"
+        app:layout_constraintBottom_toTopOf="@id/dateOfAdmissionTv"
+        android:layout_marginHorizontal="40dp"
+        android:text="Datum prijema"
+        />
+    <TextView
+        android:id="@+id/dateOfAdmissionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dateOfAdmissionTv1"
+        app:layout_constraintBottom_toTopOf="@id/cancelB"
+        android:layout_marginHorizontal="40dp"
+        android:text="Ovde ce da stoji datum prijema"
+        />
+
+    <Button
+        android:id="@+id/cancelB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dateOfAdmissionTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/dateOfAdmissionTv"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Odustani"
+        />
+    <Button
+        android:id="@+id/changeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/cancelB"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="40dp"
+        android:text="Izmeni"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

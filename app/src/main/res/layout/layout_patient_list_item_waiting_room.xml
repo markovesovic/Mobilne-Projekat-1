@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="15dp"
+    android:background="#D3D3D3"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/patientPictureIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/symptomsTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientPictureIv"
+        app:layout_constraintStart_toEndOf="@id/patientPictureIv"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:text="NAME" />
+    <TextView
+        android:id="@+id/lastNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTv"
+        app:layout_constraintBottom_toBottomOf="@id/patientPictureIv"
+        app:layout_constraintStart_toEndOf="@id/patientPictureIv"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:text="LAST NAME"/>
+
+    <TextView
+        android:id="@+id/symptomsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientPictureIv"
+        app:layout_constraintStart_toStartOf="@id/patientPictureIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/healthyB"
+        android:layout_marginHorizontal="20dp"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:text="SYMPTOMS SYMPTOMS SYMPTOMS SYMPTOMS SYMPTOMS SYMPTOMS SYMPTOMS SYMPTOMS"
+        />
+
+    <Button
+        android:id="@+id/healthyB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/symptomsTv"
+        app:layout_constraintStart_toStartOf="@id/symptomsTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Zdrav"
+        />
+
+    <Button
+        android:id="@+id/hospitalizationB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/healthyB"
+        app:layout_constraintEnd_toEndOf="@id/symptomsTv"
+        android:text="Hospitalizacija"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

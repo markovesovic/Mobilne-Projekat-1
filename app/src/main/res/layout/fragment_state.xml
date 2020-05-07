@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/pregledStanjaTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/brojPacijenataTv"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="Pregled brojnog stanja pacijenata"/>
+
+    <TextView
+        android:id="@+id/brojPacijenataTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/pregledStanjaTv"
+        app:layout_constraintBottom_toTopOf="@id/brojHospitalizovanihPacijenataTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:text="Broj pacijenata u cekaonici"/>
+
+    <TextView
+        android:id="@+id/brojHospitalizovanihPacijenataTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/brojPacijenataTv"
+        app:layout_constraintBottom_toTopOf="@id/brojOtpustenihPacijenataTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:text="Broj hospitalizovanih pacijenata"/>
+
+    <TextView
+        android:id="@+id/brojOtpustenihPacijenataTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/brojHospitalizovanihPacijenataTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:text="Broj otpustenih pacijenata"/>
+
+    <TextView
+        android:id="@+id/brojPacijenataTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/brojPacijenataTv"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="50dp"
+        android:textSize="30dp"
+        android:textColor="#FADA5E"
+        android:text="5"/>
+
+    <TextView
+        android:id="@+id/brojHospitalizovanihPacijenataTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/brojHospitalizovanihPacijenataTv"
+        app:layout_constraintRight_toRightOf="@id/brojPacijenataTv1"
+        android:textSize="30dp"
+        android:textColor="#ED2939"
+        android:text="5"
+        />
+
+    <TextView
+        android:id="@+id/brojOtpustenihPacijenataTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/brojOtpustenihPacijenataTv"
+        app:layout_constraintRight_toRightOf="@id/brojPacijenataTv1"
+        android:textSize="30dp"
+        android:textColor="#7EC850"
+        android:text="5"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

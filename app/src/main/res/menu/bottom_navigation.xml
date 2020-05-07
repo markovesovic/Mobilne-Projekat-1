@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_1"
+        android:title="Stanje"
+        android:icon="@drawable/icon_state"/>
+    <item
+        android:id="@+id/navigation_2"
+        android:title="Unos"
+        android:icon="@drawable/icon_input"/>
+    <item
+        android:id="@+id/navigation_3"
+        android:title="Liste"
+        android:icon="@drawable/icon_list"/>
+    <item
+        android:id="@+id/navigation_4"
+        android:title="Profil"
+        android:icon="@drawable/icon_profile"/>
+</menu>

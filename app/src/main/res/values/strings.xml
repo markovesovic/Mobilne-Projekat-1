@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Projekat1</string>
+    <string name="login_screen_info">Informacioni sistem za pracenje stanja pacijenata obolelih od Covid-19</string>
+</resources>

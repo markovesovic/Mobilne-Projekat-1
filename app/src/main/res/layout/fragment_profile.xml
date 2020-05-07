@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/podaciTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iconIv"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Podaci o zdravstvenom radniku"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/podaciTv"
+        app:layout_constraintBottom_toTopOf="@id/nameTv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icon_profile_fragment"/>
+
+    <TextView
+        android:id="@+id/nameTv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iconIv"
+        app:layout_constraintBottom_toTopOf="@id/nameTv"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="20dp"
+        android:text="Ime:"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTv1"
+        app:layout_constraintBottom_toTopOf="@id/lastNameTv1"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="25dp"
+        android:text="Ovde stoji ime"/>
+
+    <TextView
+        android:id="@+id/lastNameTv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTv"
+        app:layout_constraintBottom_toTopOf="@id/lastNameTv"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="20dp"
+        android:text="Prezime:"/>
+
+    <TextView
+        android:id="@+id/lastNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastNameTv1"
+        app:layout_constraintBottom_toTopOf="@id/hospitalTv1"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="25dp"
+        android:text="Ovde stoji prezime"/>
+
+    <TextView
+        android:id="@+id/hospitalTv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastNameTv"
+        app:layout_constraintBottom_toTopOf="@id/hospitalTv"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="20dp"
+        android:text="Bolnica:"/>
+
+    <TextView
+        android:id="@+id/hospitalTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hospitalTv1"
+        app:layout_constraintBottom_toBottomOf="@id/editB"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="25dp"
+        android:text="Ovde stoji bolnica"/>
+    
+    <Button
+        android:id="@+id/editB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hospitalTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signOutB"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:text="Izmeni"/>
+
+    <Button
+        android:id="@+id/signOutB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hospitalTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/editB"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="70dp"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:text="Odjava"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

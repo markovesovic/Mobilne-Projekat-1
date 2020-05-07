@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.LoginScreenActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/splash_screen_icon"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="@string/login_screen_info"/>
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:nextFocusDown="@id/lastNameEt"
+        android:hint="Unesite ime"/>
+    <EditText
+        android:id="@+id/lastNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:nextFocusDown="@id/hospitalEt"
+        android:hint="Unesite prezime"/>
+    <EditText
+        android:id="@+id/hospitalEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:nextFocusDown="@id/pinEt"
+        android:hint="Unesite ime bolnice u kojoj ste zaposleni"/>
+    <EditText
+        android:id="@+id/pinEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="80dp"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:inputType="numberPassword"
+        android:hint="Unesite pin"/>
+    <Button
+        android:id="@+id/logInB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="140dp"
+        android:text="Prijava"/>
+
+</LinearLayout>
