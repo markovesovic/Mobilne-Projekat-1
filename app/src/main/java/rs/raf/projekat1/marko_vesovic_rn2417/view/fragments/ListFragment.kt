@@ -16,6 +16,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         initTabs()
     }
     private fun initTabs() {
+        viewPagerListView.offscreenPageLimit = 4
         viewPagerListView.adapter = PagerAdapterListView(childFragmentManager)
         tabLayout.setupWithViewPager(viewPagerListView)
     }

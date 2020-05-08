@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_state.*
 import rs.raf.projekat1.marko_vesovic_rn2417.R
@@ -18,16 +19,19 @@ class StateFragment: Fragment(R.layout.fragment_state) {
         init()
     }
 
-    override fun onResume() {
-        super.onResume()
-        initListeners()
-    }
     private fun init() {
-        initListeners()
+        initObservers()
     }
-    private fun initListeners() {
-        brojPacijenataTv1.text = recyclerViewModel.getWaitingRoomPatientsLength().toString()
-        brojHospitalizovanihPacijenataTv1.text = recyclerViewModel.getHospitalizedPatientsLength().toString()
-        brojOtpustenihPacijenataTv1.text = recyclerViewModel.getRecoveredPatientsLength().toString()
+
+    private fun initObservers() {
+        recyclerViewModel.getWaitingRoomPatients().observe(viewLifecycleOwner, Observer {
+            brojPacijenataTv1.text = recyclerViewModel.getWaitingRoomPatientsList().size.toString()
+        })
+        recyclerViewModel.getHospitalizedPatients().observe(viewLifecycleOwner, Observer {
+            brojHospitalizovanihPacijenataTv1.text = recyclerViewModel.getHospitalizedPatientList().size.toString()
+        })
+        recyclerViewModel.getRecoveredPatients().observe(viewLifecycleOwner, Observer {
+            brojOtpustenihPacijenataTv1.text = recyclerViewModel.getRecoveredPatientsList().size.toString()
+        })
     }
 }

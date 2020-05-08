@@ -66,14 +66,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onBackPressed() {
         AlertDialog.Builder(this).
-        setIcon(R.drawable.icon_profile).
-        setTitle("Warning!").
-        setMessage("Are you sure you wonna quit").
-        setPositiveButton("Yes", DialogInterface.OnClickListener { _: DialogInterface, _: Int ->
-            finish()
-        }).
-        setNegativeButton("No", null).
-        show()
+                    setIcon(R.drawable.icon_profile).
+                    setTitle("Warning!").
+                    setMessage("Are you sure you wonna quit").
+                    setPositiveButton("Yes", DialogInterface.OnClickListener { _: DialogInterface, _: Int ->
+                        finish()
+                    }).
+                    setNegativeButton("No", null).
+                    show()
 
     }
 }

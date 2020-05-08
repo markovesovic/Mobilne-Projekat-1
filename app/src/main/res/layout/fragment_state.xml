@@ -67,7 +67,7 @@
         app:layout_constraintRight_toRightOf="@id/brojPacijenataTv1"
         android:textSize="30dp"
         android:textColor="#ED2939"
-        android:text="5"
+        android:text="0"
         />
 
     <TextView
@@ -78,7 +78,7 @@
         app:layout_constraintRight_toRightOf="@id/brojPacijenataTv1"
         android:textSize="30dp"
         android:textColor="#7EC850"
-        android:text="5"
+        android:text="0"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

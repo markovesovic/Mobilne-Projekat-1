@@ -46,21 +46,21 @@ class RecyclerViewModel : ViewModel() {
         return recoveredPatients
     }
 
+    fun getWaitingRoomPatientsList(): MutableList<Patient> {
+        return waitingRoomPatientsList
+    }
+    fun getHospitalizedPatientList(): MutableList<Patient> {
+        return hospitalizedPatientsList
+    }
+    fun getRecoveredPatientsList(): MutableList<Patient> {
+        return recoveredPatientsList
+    }
+
 
     fun getPatientsLength(): Int {
         return (waitingRoomPatients.value?.size ?: 0) +
                 (hospitalizedPatients.value?.size ?: 0) +
                 (recoveredPatients.value?.size ?: 0)
-    }
-
-    fun getWaitingRoomPatientsLength(): Int {
-        return waitingRoomPatients.value?.size ?: 0
-    }
-    fun getHospitalizedPatientsLength(): Int {
-        return hospitalizedPatients.value?.size ?: 0
-    }
-    fun getRecoveredPatientsLength(): Int {
-        return recoveredPatients.value?.size ?: 0
     }
 
 
